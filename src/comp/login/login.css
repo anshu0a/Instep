@@ -1,0 +1,446 @@
+.loginPage {
+    position: relative;
+    max-width: 1500px;
+    padding: 90px 0 100px;
+    background: var(--bg);
+    color: var(--text);
+    transition: background .35s ease, color .35s ease;
+}
+
+.loginPage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(circle at center, black 10%, transparent 80%);
+    pointer-events: none;
+}
+
+.loginPage > .loginLayout {
+    position: relative;
+    z-index: 1;
+    padding: 0 40px;
+    gap: 2%;
+}
+
+.loginFormArea {
+    position: relative;
+    width: 58%;
+    color: var(--text);
+}
+
+.formTop {
+    margin-bottom: 42px;
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.formTop i {
+    width: 45px;
+    height: 1px;
+    background: var(--accent);
+    opacity: .6;
+}
+
+.loginField {
+    position: relative;
+    height: 90px;
+}
+
+.loginField label,
+.passwordLabel label {
+    margin-bottom: 9px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.loginField .form-control {
+    border: 0;
+    border-bottom: 1px solid var(--line) !important;
+    border-radius: 0;
+    background: transparent !important;
+    color: var(--heading) !important;
+    font-size: 15px;
+    transition:
+        border-color .25s ease,
+        padding .25s ease;
+}
+
+.loginField .form-control::placeholder {
+    color: var(--placeholder);
+    opacity: .75;
+}
+
+.loginField .form-control:focus {
+    padding-left: 5px;
+    border-bottom-color: var(--accent) !important;
+}
+
+.loginField:focus-within label {
+    color: var(--accent);
+}
+
+.passwordLabel {
+    margin-bottom: 9px;
+}
+
+.passwordLabel label {
+    margin: 0;
+}
+
+.passwordLabel a {
+    color: var(--muted);
+    font-size: 11px;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.passwordLabel a:hover {
+    color: var(--accent);
+}
+
+.passwordBox {
+    position: relative;
+}
+
+.passwordBox .form-control {
+    padding-right: 55px;
+}
+
+.showButton {
+    position: absolute;
+    right: 0;
+    bottom: 13px;
+    border: 0;
+    background: transparent;
+    color: var(--muted) !important;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.showButton:hover {
+    color: var(--accent) !important;
+    transform: translateY(-1px);
+}
+
+.validationError {
+    margin-top: 8px;
+    color: #c86b6b;
+    font-size: 11px;
+}
+
+.rememberRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+}
+
+.remember {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.remember input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.rememberBox {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .15s ease;
+}
+
+.remember input:checked + .rememberBox {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.remember input:focus-visible + .rememberBox {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.remember input:active + .rememberBox {
+    transform: scale(.9);
+}
+
+.rememberText {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.savedAccountsLink {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.savedAccountsLink:hover {
+    color: var(--heading);
+}
+
+.loginButton {
+    height: 54px;
+    padding: 0 22px;
+    overflow: hidden;
+    border: 0 !important;
+    border-radius: 10px !important;
+    background: rgb(255, 112, 45) !important;
+    color: var(--buttonText) !important;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.loginButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+}
+
+.loginButton:disabled {
+    opacity: .65;
+    cursor: not-allowed;
+}
+
+.loginButton span {
+    position: relative;
+    z-index: 1;
+}
+
+.createAccount {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.createAccount a {
+    color: var(--heading);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition:
+        color .2s ease,
+        border-color .2s ease;
+}
+
+.createAccount a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.loginOptions {
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.loginOptions button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--heading);
+    cursor: pointer;
+    transition:
+        border-color .25s ease,
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.loginOptions button:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+    color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.loginOptions button:active:not(:disabled) {
+    transform: translateY(-1px) scale(.97);
+}
+
+.loginOptions button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.loginOptions svg {
+    width: 19px;
+    height: 19px;
+}
+
+.loginServerError {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin: -22px 0 20px;
+    color: #c86b6b;
+    font-size: 11px;
+    line-height: 1.5;
+    animation: errorIn .25s ease;
+}
+
+.loginServerError::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #c86b6b;
+    box-shadow: 0 0 0 4px rgba(200, 107, 107, .08);
+}
+
+.loginLoader {
+    width: 14px;
+    height: 14px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: loginSpin .7s linear infinite;
+}
+
+.disabledLink {
+    pointer-events: none;
+    opacity: .5;
+}
+
+@keyframes errorIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loginSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .loginPage > .loginLayout {
+        padding: 0 5%;
+    }
+
+    .loginPage > .loginLayout > .info {
+        display: none;
+    }
+
+    .loginFormArea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .rememberRow {
+        gap: 8px;
+    }
+
+    .rememberText {
+        font-size: 11px;
+    }
+
+    .savedAccountsLink {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .loginPage {
+        padding: 60px 0 70px;
+    }
+
+    .loginPage > .loginLayout {
+        padding: 0 20px;
+    }
+
+    .loginOptions {
+        gap: 7px;
+    }
+
+    .loginOptions button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .rememberRow {
+        align-items: center;
+    }
+
+    .remember {
+        gap: 7px;
+    }
+
+    .rememberBox {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+    }
+}

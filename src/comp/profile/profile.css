@@ -1,0 +1,1489 @@
+.profile {
+    width: 100%;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+}
+
+.profileTopbar {
+    height: 70px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.profileBack,
+.profileSettings,
+.profileQrBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    transition: .2s ease;
+}
+
+.profileBack:hover,
+.profileSettings:hover,
+.profileQrBtn:hover {
+    color: var(--heading);
+}
+
+.profileTopActions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profileQrBtn {
+    min-height: 35px;
+    padding: 0 13px;
+    border: 1px solid var(--line);
+    background: transparent;
+    cursor: pointer;
+}
+
+.profileTopTitle {
+    color: var(--subtle);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.profileTopTitle strong {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.profileHero {
+    border-bottom: 1px solid var(--line);
+}
+
+.profileHeroInner {
+    max-width: 1500px;
+    margin: auto;
+    padding: 85px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.profileHeroIdentity {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.profileAvatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--accent);
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.profileAvatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.profileAvatar > span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileAvatarStatus {
+    position: absolute;
+    right: -9px;
+    bottom: -9px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--accent);
+}
+
+.profileAvatarStatus svg {
+    width: 20px;
+    height: 20px;
+}
+
+.profileHeroText {
+    min-width: 0;
+    flex: 1;
+}
+
+.profileLabel {
+    display: block;
+    color: var(--accent);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.profileHeroText h1 {
+    max-width: 100%;
+    margin: 13px 0 4px;
+    color: var(--heading);
+    font-size: clamp(45px, 6vw, 82px);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -4px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.profileUsername {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.profileVerified {
+    margin-top: 19px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--accent);
+    font-size: 9px;
+    letter-spacing: .5px;
+}
+
+.profileHeroActions {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.profileHeroAction {
+    min-height: 40px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.profileHeroAction:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+}
+
+.profileHeroRight {
+    width: 280px;
+    flex: 0 0 280px;
+    padding-top: 17px;
+    border-top: 2px solid var(--heading);
+}
+
+.profileHeroRight > span {
+    color: var(--subtle);
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.profileHeroRight strong {
+    margin-top: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--heading);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.profileHeroRight strong i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.profileHeroRight p {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.profileStats {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 7%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--line);
+}
+
+.profileStat {
+    min-width: 0;
+    min-height: 130px;
+    padding: 25px;
+    border-left: 1px solid var(--line);
+}
+
+.profileStat:last-child {
+    border-right: 1px solid var(--line);
+}
+
+.profileStat span {
+    color: var(--subtle);
+    font-size: 7px;
+    letter-spacing: 1.6px;
+}
+
+.profileStat strong {
+    display: block;
+    margin-top: 14px;
+    color: var(--heading);
+    font-size: 17px;
+}
+
+.profileStat p {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.profilePublicIntro {
+    max-width: 1500px;
+    margin: auto;
+    padding: 70px 7%;
+    border-bottom: 1px solid var(--line);
+}
+
+.profilePublicIntroInner {
+    max-width: 850px;
+}
+
+.profilePublicIntroLabel {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.profilePublicIntro h2 {
+    margin: 13px 0 15px;
+    color: var(--heading);
+    font-size: clamp(35px, 5vw, 60px);
+    line-height: .95;
+    letter-spacing: -3px;
+    overflow-wrap: anywhere;
+}
+
+.profilePublicIntro p {
+    max-width: 720px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.profilePublicMeta {
+    margin-top: 27px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.profilePublicMeta span {
+    min-height: 34px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    color: var(--subtle);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.profilePublicMeta strong {
+    margin-left: 6px;
+    color: var(--heading);
+    font-weight: 600;
+}
+
+.profileShareCard {
+    max-width: 1500px;
+    margin: auto;
+    padding: 50px 7% 70px;
+}
+
+.profileShareCardInner {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border: 1px solid var(--line);
+}
+
+.profileShareCardText {
+    min-width: 0;
+}
+
+.profileShareCardText > span {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.profileShareCardText h3 {
+    margin: 10px 0 5px;
+    color: var(--heading);
+    font-size: 20px;
+}
+
+.profileShareCardText p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.profileShareActions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.profileShareActions button {
+    min-height: 40px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font-size: 8px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.profileShareActions button:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+}
+
+.profileVisitorBottom {
+    max-width: 1500px;
+    margin: auto;
+    padding: 0 7% 70px;
+}
+
+.profileVisitorMember {
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.profileVisitorMember svg {
+    color: var(--accent);
+}
+
+.profileVisitorMember strong {
+    color: var(--heading);
+}
+
+.profileLayout {
+    max-width: 1500px;
+    margin: auto;
+    padding: 100px 7%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 100px;
+}
+
+.profileMain {
+    min-width: 0;
+}
+
+.profileBlock {
+    margin-bottom: 100px;
+}
+
+.profileBlock:last-child {
+    margin-bottom: 0;
+}
+
+.profileBlockHeading {
+    margin-bottom: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.profileBlockHeading > div > span {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.profileBlockHeading h2 {
+    margin: 11px 0 0;
+    color: var(--heading);
+    font-size: 37px;
+    line-height: .9;
+    letter-spacing: -2px;
+}
+
+.profileBlockHeading > a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.profileBlockHeading > a:hover {
+    color: var(--heading);
+}
+
+.profileConnectedCount {
+    color: var(--subtle);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.profileInformation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+}
+
+.profileInfoItem {
+    min-width: 0;
+    min-height: 115px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.profileInfoIcon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+}
+
+.profileInfoItem > div:last-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profileInfoItem span {
+    color: var(--subtle);
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+.profileInfoItem strong {
+    max-width: 100%;
+    color: var(--heading);
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileInfoBio {
+    grid-column: span 2;
+    align-items: flex-start;
+}
+
+.profileInfoBio strong {
+    color: var(--muted);
+    line-height: 1.7;
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.profileApps {
+    border-top: 1px solid var(--line);
+}
+
+.profileApp {
+    min-height: 105px;
+    display: grid;
+    grid-template-columns: 40px 52px minmax(0, 1fr) 110px 20px;
+    align-items: center;
+    gap: 18px;
+    border-bottom: 1px solid var(--line);
+    color: inherit;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.profileApp:hover {
+    padding-left: 8px;
+}
+
+.profileAppNumber {
+    color: var(--subtle);
+    font-size: 8px;
+}
+
+.profileAppIcon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+    font-size: 17px;
+}
+
+.profileAppDetails {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profileAppDetails span {
+    color: var(--subtle);
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+.profileAppDetails strong {
+    overflow: hidden;
+    color: var(--heading);
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileAppDetails p {
+    margin: 0;
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileAppConnection {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--subtle);
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+.profileAppConnection i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.profileApp > svg {
+    color: var(--subtle);
+}
+
+.profileActivity {
+    border-top: 1px solid var(--line);
+}
+
+.profileActivityItem {
+    min-height: 90px;
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 17px;
+    border-bottom: 1px solid var(--line);
+}
+
+.profileActivityIcon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+}
+
+.profileActivityItem > div:nth-child(2) {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profileActivityItem strong {
+    overflow: hidden;
+    color: var(--heading);
+    font-size: 11px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileActivityItem span {
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileActivityItem time {
+    color: var(--subtle);
+    font-size: 7px;
+    letter-spacing: 1px;
+}
+
+.profileSidebar {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profileCompletion,
+.profileSecurityCard,
+.profileSession,
+.profileQuickActions {
+    border: 1px solid var(--line);
+    padding: 25px;
+}
+
+.profileCompletionTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profileCompletionTop span,
+.profileQuickActions > span {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.profileCompletionTop strong {
+    color: var(--heading);
+    font-size: 13px;
+}
+
+.profileProgress {
+    height: 3px;
+    margin: 22px 0 15px;
+    background: var(--line);
+}
+
+.profileProgress span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    transition: width .4s ease;
+}
+
+.profileCompletion p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.profileCompletion a,
+.profileSecurityCard a {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 9px;
+}
+
+.profileCompletion a:hover,
+.profileSecurityCard a:hover {
+    color: var(--heading);
+}
+
+.profileSecurityHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileSecurityHeader > span {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+}
+
+.profileSecurityIcon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+}
+
+.profileSecurityCard h3 {
+    margin: 25px 0 10px;
+    color: var(--heading);
+    font-size: 16px;
+}
+
+.profileSecurityCard p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.profileSecurityStatus {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 9px;
+}
+
+.profileSession {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.profileSessionIcon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+}
+
+.profileSession > div:last-child {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profileSession span {
+    color: var(--subtle);
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+.profileSession strong {
+    overflow: hidden;
+    color: var(--heading);
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileSession p {
+    margin: 0;
+    overflow: hidden;
+    color: var(--muted);
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileQuickActions {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileQuickActions > span {
+    margin-bottom: 15px;
+}
+
+.profileQuickActions a {
+    min-height: 45px;
+    display: grid;
+    grid-template-columns: 20px minmax(0, 1fr) 15px;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 9px;
+}
+
+.profileQuickActions a:hover {
+    color: var(--heading);
+}
+
+.profileQuickActions svg {
+    font-size: 13px;
+}
+
+.profileBottom {
+    padding: 110px 7%;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.profileBottom > div > span {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.profileBottom h2 {
+    margin: 15px 0 0;
+    color: var(--heading);
+    font-size: clamp(48px, 6vw, 82px);
+    line-height: .87;
+    letter-spacing: -5px;
+}
+
+.profileBottom h2 em {
+    font-family: Georgia, serif;
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.profileBottom > a {
+    min-height: 48px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--button);
+    color: var(--buttonText);
+    text-decoration: none;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.profileEmpty {
+    min-height: 70vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.profileEmpty > svg {
+    margin-bottom: 20px;
+    color: var(--accent);
+    font-size: 30px;
+}
+
+.profileEmpty h2 {
+    margin: 0;
+    color: var(--heading);
+    font-size: 28px;
+}
+
+.profileEmpty p {
+    max-width: 500px;
+    margin: 10px 0 25px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.profileEmpty > a,
+.profileErrorActions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.profileErrorIcon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+}
+
+.profileErrorIcon svg {
+    margin: 0;
+    font-size: 27px;
+}
+
+.profileErrorLabel {
+    margin-bottom: 12px;
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.profileErrorActions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profileQrOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(12px);
+}
+
+.profileQrModal {
+    position: relative;
+    width: min(420px, 100%);
+    padding: 35px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    box-shadow: 0 25px 80px color-mix(in srgb, var(--heading) 10%, transparent);
+}
+
+.profileQrClose {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.profileQrClose:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+}
+
+.profileQrLabel {
+    color: var(--accent);
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.profileQrModal h3 {
+    margin: 10px 0 5px;
+    color: var(--heading);
+    font-size: 24px;
+    overflow-wrap: anywhere;
+}
+
+.profileQrModal > p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 9px;
+}
+
+.profileQrCode {
+    width: 220px;
+    height: 220px;
+    margin: 30px auto;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.profileQrCode svg {
+    width: 100%;
+    height: 100%;
+}
+
+.profileQrUrl {
+    width: 100%;
+    padding: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 8px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.profileQrActions {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+}
+
+.profileQrActions button {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    font-size: 8px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.profileQrActions button:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+}
+
+.profileShareToast {
+    position: fixed;
+    z-index: 10000;
+    right: 25px;
+    bottom: 25px;
+    min-height: 42px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--heading);
+    font-size: 9px;
+    box-shadow: 0 12px 35px color-mix(in srgb, var(--heading) 10%, transparent);
+}
+
+@media(max-width:1100px) {
+
+    .profileHeroInner {
+        gap: 40px;
+    }
+
+    .profileHeroRight {
+        width: 240px;
+        flex-basis: 240px;
+    }
+
+    .profileLayout {
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 50px;
+    }
+
+}
+
+@media(max-width:900px) {
+
+    .profileHeroInner {
+        display: block;
+        padding: 70px 5%;
+    }
+
+    .profileHeroRight {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 50px;
+    }
+
+    .profileLayout {
+        grid-template-columns: 1fr;
+        padding: 75px 5%;
+    }
+
+    .profileSidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profileQuickActions {
+        grid-column: span 2;
+    }
+
+}
+
+@media(max-width:700px) {
+
+    .profileTopbar {
+        height: 62px;
+        padding: 0 20px;
+    }
+
+    .profileTopTitle {
+        display: none;
+    }
+
+    .profileTopActions {
+        gap: 6px;
+    }
+
+    .profileHeroInner {
+        padding: 55px 20px;
+    }
+
+    .profileHeroIdentity {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .profileAvatar {
+        width: 82px;
+        height: 82px;
+        flex-basis: 82px;
+        font-size: 28px;
+    }
+
+    .profileAvatarStatus {
+        width: 25px;
+        height: 25px;
+        right: -6px;
+        bottom: -6px;
+    }
+
+    .profileAvatarStatus svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .profileHeroText {
+        width: calc(100% - 102px);
+    }
+
+    .profileHeroText h1 {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+        font-size: clamp(36px, 11vw, 54px);
+        line-height: .92;
+        letter-spacing: -2.5px;
+        overflow-wrap: anywhere;
+    }
+
+    .profileUsername {
+        font-size: 13px;
+    }
+
+    .profileHeroRight {
+        margin-top: 40px;
+    }
+
+    .profileStats {
+        padding: 0 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profileStat {
+        min-height: 105px;
+        padding: 18px 15px;
+    }
+
+    .profileStat strong {
+        font-size: 14px;
+    }
+
+    .profilePublicIntro {
+        padding: 55px 20px;
+    }
+
+    .profilePublicIntro h2 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .profileShareCard {
+        padding: 40px 20px 55px;
+    }
+
+    .profileShareCardInner {
+        display: block;
+        padding: 22px;
+    }
+
+    .profileShareActions {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profileVisitorBottom {
+        padding: 0 20px 55px;
+    }
+
+    .profileLayout {
+        padding: 65px 20px;
+    }
+
+    .profileInformation {
+        grid-template-columns: 1fr;
+    }
+
+    .profileInfoBio {
+        grid-column: auto;
+    }
+
+    .profileSidebar {
+        display: flex;
+    }
+
+    .profileQuickActions {
+        grid-column: auto;
+    }
+
+    .profileBlockHeading {
+        display: block;
+    }
+
+    .profileConnectedCount {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .profileApp {
+        grid-template-columns: 28px 45px minmax(0, 1fr) 15px;
+        gap: 10px;
+    }
+
+    .profileAppConnection {
+        display: none;
+    }
+
+    .profileAppDetails p {
+        display: none;
+    }
+
+    .profileActivityItem {
+        grid-template-columns: 38px minmax(0, 1fr);
+    }
+
+    .profileActivityItem time {
+        display: none;
+    }
+
+    .profileBottom {
+        padding: 75px 20px;
+        display: block;
+    }
+
+    .profileBottom h2 {
+        letter-spacing: -3px;
+    }
+
+    .profileBottom > a {
+        width: 100%;
+        margin-top: 35px;
+        justify-content: center;
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .profileBack span,
+    .profileSettings span,
+    .profileQrBtn span {
+        display: none;
+    }
+
+    .profileBack,
+    .profileSettings,
+    .profileQrBtn {
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: 1px solid var(--line);
+    }
+
+    .profileHeroIdentity {
+        gap: 14px;
+    }
+
+    .profileAvatar {
+        width: 65px;
+        height: 65px;
+        flex-basis: 65px;
+        font-size: 23px;
+    }
+
+    .profileHeroText {
+        width: calc(100% - 79px);
+    }
+
+    .profileHeroText h1 {
+        font-size: clamp(31px, 10vw, 43px);
+        letter-spacing: -2px;
+    }
+
+    .profileHeroActions {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .profileHeroAction {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .profileStats {
+        padding: 0 20px;
+    }
+
+    .profileStat {
+        padding: 16px 12px;
+    }
+
+    .profileStat span {
+        font-size: 6px;
+    }
+
+    .profileStat strong {
+        font-size: 12px;
+    }
+
+    .profileStat p {
+        font-size: 8px;
+    }
+
+    .profileInfoItem {
+        min-height: 95px;
+        padding: 17px;
+    }
+
+    .profileInfoIcon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+    }
+
+    .profileInfoItem strong {
+        font-size: 11px;
+    }
+
+    .profileQrOverlay {
+        padding: 15px;
+    }
+
+    .profileQrModal {
+        padding: 28px 20px;
+    }
+
+    .profileQrCode {
+        width: 190px;
+        height: 190px;
+        margin: 25px auto;
+    }
+
+    .profileQrActions {
+        grid-template-columns: 1fr;
+    }
+
+    .profileShareToast {
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        justify-content: center;
+    }
+
+    .profileErrorActions {
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+@media(max-width:350px) {
+
+    .profileAvatar {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+    }
+
+    .profileHeroText {
+        width: calc(100% - 72px);
+    }
+
+    .profileHeroText h1 {
+        font-size: 29px;
+    }
+
+}

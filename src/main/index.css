@@ -1,0 +1,81 @@
+:root {
+  --bg: #f5f6f8;
+  --text: #15181d;
+  --heading: #101318;
+  --muted: #747b84;
+  --subtle: #8b929b;
+  --line: #d7dbe0;
+  --input: #242931;
+  --placeholder: #9da3aa;
+  --accent: #607da8;
+  --button: #171a1f;
+  --buttonText: #ffffff;
+  --dot: rgba(0, 0, 0, 0.231);
+  --grid: rgba(0, 0, 0, 0.025);
+}
+
+:root.darkMode {
+  --bg: #07090d;
+  --text: #f1f3f6;
+  --heading: #f1f3f6;
+  --muted: #8a95a3;
+  --subtle: #747d89;
+  --line: #4e5865;
+  --input: #edf0f4;
+  --placeholder: #77879c;
+  --accent: #91a9cb;
+  --button: #111419;
+  --buttonText: #e9edf2;
+  --dot: rgba(255, 255, 255, 0.23);
+  --grid: rgba(255, 255, 255, 0.015);
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.img {
+  object-fit: cover;
+  object-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text)
+}
+
+.wd {
+  width: 100%;
+}
+
+.isFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.clk{
+  scale: 1;
+  transition: .3s ease !important;
+}
+.clk:active{
+  scale: 1.2;
+}
+
+.clk:active{
+  scale: .9;
+}
+
+.glass {
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}

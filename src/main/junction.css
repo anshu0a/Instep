@@ -1,0 +1,61 @@
+.junction {
+    background-color: var(--bg);
+    height: 100dvh;
+}
+
+.junction>.mainPrt {
+    height: calc(100dvh - 70px);
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    scrollbar-color: rgb(255, 64, 1) transparent;
+
+}
+
+.junction>.mainPrt>.routebox {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.junction>.mainPrt>.instepFooter {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* .junction>.topper {
+    height: 70px;
+    min-height: 70px;
+    background-color: var(--bg);
+}
+
+.junction>.topper>.logo {
+    width: 100%;
+}
+
+.junction>.topper>.logo>.loginLogo {
+    width: 30px;
+    aspect-ratio: 1/1;
+}
+
+.junction>.topper>.logo>.loginLogotext {
+    width: 100px;
+}
+
+.junction>.topper>.themeButton {
+    color: var(--subtle);
+}
+
+.junction>.topper>.themeButton>span {
+    font-size: 13px;
+}
+
+@media(max-width:500px) {
+
+    .junction>.topper>.logo>.loginLogotext,
+    .junction>.topper>.themeButton>span {
+        display: none;
+    }
+} */

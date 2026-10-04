@@ -1,0 +1,297 @@
+.nav {
+    height: 70px;
+    min-height: 70px;
+    position: relative;
+    z-index: 100;
+    padding: 0 24px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+}
+
+.navLogo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+}
+
+.navLogo .loginLogo {
+    width: 30px;
+    height: 30px;
+}
+
+.navLogo .loginLogotext {
+    width: 100px;
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.navItem {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    font-family: inherit;
+    font-size: 9px;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        color .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.navItem svg {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.navItem:hover {
+    color: var(--text);
+    border-color: var(--line);
+    background: color-mix(
+        in srgb,
+        var(--text) 3%,
+        transparent
+    );
+}
+
+.navRegister {
+    border-color: var(--line);
+    color: var(--text);
+}
+
+.navRegister:hover {
+    border-color: var(--accent);
+}
+
+.navLogout {
+    font-family: inherit;
+}
+
+.navDivider {
+    width: 1px;
+    height: 24px;
+    margin: 0 5px;
+    background: var(--line);
+}
+
+.navTheme {
+    height: 38px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.navTheme svg {
+    width: 15px;
+    height: 15px;
+}
+
+.navTheme:hover {
+    color: var(--text);
+    border-color: var(--accent);
+}
+
+.navMenu {
+    display: none;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.navMenu svg {
+    width: 17px;
+    height: 17px;
+}
+
+.navMobile {
+    display: none;
+}
+
+@media(max-width:1200px) {
+
+    .navItem {
+        padding: 0 7px;
+    }
+
+    .navItem span {
+        display: none;
+    }
+
+    .navItem {
+        width: 38px;
+        padding: 0;
+    }
+
+}
+
+@media(max-width:700px) {
+
+    .nav {
+        padding: 0 15px !important;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .navMenu {
+        display: flex;
+    }
+
+    .navTheme span {
+        display: none;
+    }
+
+    .navTheme {
+        width: 38px;
+        padding: 0;
+    }
+
+    .navMobile {
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        width: 230px;
+        padding: 7px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--line);
+        background: var(--bg);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .12);
+    }
+
+    .navMobile a,
+    .navMobile button {
+        min-height: 44px;
+        padding: 0 13px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        border: 0;
+        border-bottom: 1px solid var(--line);
+        background: transparent;
+        color: var(--text);
+        font-family: inherit;
+        font-size: 10px;
+        letter-spacing: 1.3px;
+        text-decoration: none;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .navMobile a:last-child,
+    .navMobile button:last-child {
+        border-bottom: 0;
+    }
+
+    .navMobile svg {
+        width: 15px;
+        height: 15px;
+        color: var(--accent);
+    }
+
+}
+
+@media(max-width:400px) {
+
+    .navLogo .loginLogotext {
+        display: none;
+    }
+
+}
+.navItem {
+    transition: color .25s ease, transform .25s ease;
+}
+
+.navItem svg {
+    transition: transform .25s ease, color .25s ease;
+}
+
+.navActive {
+    color: rgb(255, 72, 11);
+    font-weight: 600;
+}
+
+.navActive svg {
+    color: rgb(255, 38, 0);
+    transform: scale(1.18);
+    stroke-width: 2.5;
+}
+
+
+.navItem {
+    transition: color .25s ease, transform .25s ease;
+}
+
+.navItem svg {
+    transition: transform .25s ease, color .25s ease;
+}
+
+
+.navActive svg {
+    color: #f97316;
+    transform: scale(1.15);
+    stroke-width: 2.4;
+}
+
+.navMenu {
+    transition: color .25s ease, transform .25s ease;
+}
+
+.navMenu svg {
+    transition: transform .3s ease, color .25s ease;
+}
+
+.navMenuActive {
+    color: #f97316;
+}
+
+.navMenuActive svg {
+    color: #f97316;
+    transform: rotate(90deg);
+}
+
+.navMobileActive {
+    color: #f97316 !important;
+}
+
+.navMobileActive svg {
+    color: #f97316;
+}

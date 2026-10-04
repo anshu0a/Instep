@@ -1,0 +1,256 @@
+.instepFooter {
+    position: relative;
+    padding: 70px 7% 22px;
+    background: var(--bg);
+    color: var(--text);
+    border-top: 1px solid var(--line);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden;
+}
+
+.instepFooter::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.07;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.instepFooter::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: radial-gradient(
+        var(--dot) 1px,
+        transparent 1px
+    );
+    background-size: 28px 28px;
+    opacity: 0.12;
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent 75%
+    );
+    pointer-events: none;
+}
+
+.instepFooterTop,
+.instepFooterBottom {
+    position: relative;
+    z-index: 1;
+}
+.instepFooterTop {
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1.25fr;
+    gap: 55px;
+}
+
+.instepFooterBrand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.instepFooterBrand>.instepLogo {
+  max-width:120px;
+  width: 100%;
+}
+
+.instepFooterBrand>.instepLogo::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    margin-left: 5px;
+    margin-top: 17px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 15px var(--accent);
+}
+.instepFooterBrand p {
+    max-width: 350px;
+    margin: 14px 0 24px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 500 !important;
+}
+
+.instepSocial {
+    display: flex;
+    gap: 9px;
+}
+
+.instepSocial a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--bg) 88%, var(--accent));
+    color: var(--muted);
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.instepSocial a:hover {
+    transform: translateY(-5px);
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.instepFooterColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.instepFooterColumn h4 {
+    position: relative;
+    width: fit-content;
+    margin: 0 0 9px;
+    color: var(--heading);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.instepFooterColumn h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 18px;
+    height: 2px;
+    border-radius: 5px;
+    background: rgb(255, 77, 0)
+}
+
+.instepFooterColumn a {
+    width: fit-content;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.instepFooterColumn a:hover {
+    color: rgb(255, 77, 0);
+    transform: translateX(5px);
+}
+
+
+.instepFooterBottom {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--subtle);
+    font-size: 12px;
+}
+
+.instepMade {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.instepMade svg {
+    color: var(--accent);
+    font-size: 13px;
+}
+
+.instepTopButton {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg);
+    color: rgb(255, 85, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.instepTopButton:hover {
+    transform: translateY(-4px);
+    color: rgb(255, 85, 0);
+    border-color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 950px) {
+    .instepFooterTop {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .instepFooterQuote {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .instepFooter {
+        padding: 50px 25px 20px;
+    }
+
+    .instepFooterTop {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 25px;
+    }
+
+    .instepFooterBrand {
+        grid-column: 1 / -1;
+    }
+
+    .instepFooterBottom {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 420px) {
+    .instepFooterTop {
+        grid-template-columns: 1fr;
+    }
+
+    .instepFooterBottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.footerActive {
+    color: #ff1e00 !important;
+    font-weight: 600;
+}

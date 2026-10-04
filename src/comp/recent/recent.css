@@ -1,0 +1,699 @@
+.recentLoginPage {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+}
+
+.recentLoginMain {
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    z-index: 2;
+}
+
+.recentTop {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.recentLogo {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 23px;
+}
+
+.recentHeaderText {
+    min-width: 0;
+}
+
+.recentEyebrow {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--muted, #7c838d);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.recentHeaderText h1 {
+    margin: 0;
+    font-size: clamp(29px, 5vw, 38px);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.recentHeaderText h1 span {
+    color: var(--accent, #607da8);
+}
+
+.recentHeaderText p {
+    margin: 8px 0 0;
+    color: var(--muted, #7c838d);
+    font-size: 14px;
+}
+
+.recentContent {
+    width: 100%;
+}
+
+.recentSectionHead {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    padding: 0 4px;
+}
+
+.recentSectionHead h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.recentSectionHead p {
+    margin: 4px 0 0;
+    color: var(--muted, #858c96);
+    font-size: 11px;
+}
+
+.recentSecure {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--muted, #858c96);
+    font-size: 10px;
+}
+
+.recentSecure svg {
+    font-size: 12px;
+}
+
+.recentAccounts {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.recentAccount {
+    width: 100%;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 10px 12px;
+    border: 1px solid var(--border, #e2e5e9);
+    border-radius: 15px;
+    background: transparent;
+    color: var(--text);
+    text-align: left;
+    cursor: pointer;
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+.recentAccount:hover {
+    border-color: var(--accent, #607da8);
+    background: rgba(96, 125, 168, .045);
+    transform: translateY(-1px);
+}
+
+.recentAccount:active {
+    transform: scale(.99);
+}
+
+.recentAvatarWrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.recentAvatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent, #607da8);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.recentAvatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.recentAvatar span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.recentOnline {
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #7b9981;
+    border: 2px solid var(--bg);
+}
+
+.recentAccountInfo {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.recentAccountInfo strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.recentAccountInfo span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--muted, #7c838d);
+    font-size: 12px;
+}
+
+.recentAccountInfo small {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--muted, #8b929c);
+    font-size: 10px;
+}
+
+.recentAccountActions {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    flex-shrink: 0;
+}
+
+.recentRemove {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--muted, #858c96);
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(4px);
+    transition:
+        opacity .2s ease,
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+.recentAccount:hover .recentRemove,
+.recentAccount:focus-within .recentRemove {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.recentRemove:hover {
+    color: #c56b6b;
+    background: rgba(197, 107, 107, .09);
+}
+
+.recentLoginAction {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: var(--muted, #7c838d);
+    font-size: 17px;
+    transition:
+        color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+.recentAccount:hover .recentLoginAction {
+    color: var(--accent, #607da8);
+    background: rgba(96, 125, 168, .09);
+    transform: translateX(2px);
+}
+
+.recentEmpty {
+    padding: 35px 20px;
+    border: 1px dashed var(--border, #dfe3e8);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.recentEmptyIcon {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: rgba(96, 125, 168, .08);
+    color: var(--accent, #607da8);
+    font-size: 20px;
+}
+
+.recentEmpty h3 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.recentEmpty p {
+    max-width: 320px;
+    margin: 0 auto;
+    color: var(--muted, #7c838d);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.recentBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.recentAnother {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 10px;
+    border: 1px solid var(--border, #e2e5e9);
+    border-radius: 14px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.recentAnother:hover {
+    border-color: var(--accent, #607da8);
+    background: rgba(96, 125, 168, .045);
+}
+
+.recentAnotherIcon {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(96, 125, 168, .09);
+    color: var(--accent, #607da8);
+    font-size: 15px;
+}
+
+.recentAnother > svg {
+    margin-left: auto;
+    color: var(--muted, #7c838d);
+    font-size: 15px;
+}
+
+.recentCreate {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+    color: var(--muted, #7c838d);
+    text-decoration: none;
+    font-size: 11px;
+    transition: color .2s ease;
+}
+
+.recentCreate:hover {
+    color: var(--accent, #607da8);
+}
+
+.recentFooter {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted, #8a919a);
+    font-size: 10px;
+    opacity: .75;
+}
+
+.recentPopupOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, .38);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: recentFadeIn .2s ease;
+}
+
+.recentRemovePopup {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    padding: 27px;
+    border: 1px solid var(--border, #e2e5e9);
+    border-radius: 20px;
+    background: var(--bg);
+    color: var(--text);
+    text-align: center;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .18);
+    animation: recentPopupIn .22s ease;
+}
+
+.recentPopupClose {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 31px;
+    height: 31px;
+    padding: 0;
+    border: 0;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--muted, #858c96);
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.recentPopupClose:hover {
+    background: rgba(0, 0, 0, .05);
+    color: var(--text);
+}
+
+.recentPopupIcon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 15px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(197, 107, 107, .1);
+    color: #c56b6b;
+    font-size: 20px;
+}
+
+.recentRemovePopup h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.recentRemovePopup p {
+    margin: 0;
+    color: var(--muted, #7c838d);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.recentRemovePopup p strong {
+    color: var(--text);
+    font-weight: 650;
+}
+
+.recentPopupActions {
+    display: flex;
+    gap: 9px;
+    margin-top: 23px;
+}
+
+.recentPopupActions button {
+    flex: 1;
+    height: 42px;
+    padding: 0 12px;
+    border-radius: 11px;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        filter .2s ease;
+}
+
+.recentPopupCancel {
+    border: 1px solid var(--border, #e1e5e9);
+    background: transparent;
+    color: var(--text);
+}
+
+.recentPopupCancel:hover {
+    background: rgba(0, 0, 0, .04);
+}
+
+.recentPopupRemove {
+    border: 1px solid #c56b6b;
+    background: #c56b6b;
+    color: #fff;
+}
+
+.recentPopupRemove:hover {
+    filter: brightness(.94);
+}
+
+.recentSuccessPopup {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    z-index: 1100;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 15px 10px 10px;
+    border: 1px solid var(--border, #e1e5e9);
+    border-radius: 13px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .12);
+    animation: recentToastIn .25s ease;
+    white-space: nowrap;
+}
+
+.recentSuccessPopup span {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(91, 143, 104, .11);
+    color: #5b8f68;
+    font-size: 14px;
+}
+
+@keyframes recentFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes recentPopupIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes recentToastIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .recentLoginPage {
+        min-height: 100dvh;
+        padding: 30px 15px;
+        align-items: flex-start;
+    }
+
+    .recentLoginMain {
+        padding-top: 35px;
+    }
+
+    .recentTop {
+        margin-bottom: 25px;
+    }
+
+    .recentLogo {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 14px;
+        border-radius: 14px;
+        font-size: 21px;
+    }
+
+    .recentHeaderText h1 {
+        font-size: 30px;
+    }
+
+    .recentHeaderText p {
+        font-size: 13px;
+    }
+
+    .recentSecure {
+        display: none;
+    }
+
+    .recentAccount {
+        min-height: 70px;
+        padding: 9px 10px;
+        border-radius: 14px;
+    }
+
+    .recentAvatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 13px;
+        font-size: 18px;
+    }
+
+    .recentAccountInfo strong {
+        font-size: 13px;
+    }
+
+    .recentAccountInfo span {
+        font-size: 11px;
+    }
+
+    .recentAccountInfo small {
+        font-size: 9px;
+    }
+
+    .recentRemove {
+        opacity: 1;
+        width: 31px;
+        height: 31px;
+        font-size: 14px;
+        transform: none;
+    }
+
+    .recentLoginAction {
+        width: 31px;
+        min-width: 31px;
+        height: 31px;
+    }
+
+    .recentAccountActions {
+        gap: 1px;
+    }
+
+    .recentRemovePopup {
+        max-width: 340px;
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    .recentSuccessPopup {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .recentLoginPage {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .recentHeaderText h1 {
+        font-size: 27px;
+    }
+
+    .recentAccountInfo small {
+        display: none;
+    }
+
+    .recentLoginAction {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+    }
+
+    .recentRemove {
+        width: 30px;
+        height: 30px;
+    }
+
+    .recentRemovePopup {
+        padding: 22px 17px;
+    }
+
+    .recentPopupActions button {
+        height: 40px;
+    }
+}

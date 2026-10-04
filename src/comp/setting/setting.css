@@ -1,0 +1,773 @@
+.settings {
+    width: 100%;
+    min-height: 100%;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.settingsTopbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    border-bottom: 1px solid var(--line);
+}
+
+.settingsBack,
+.settingsStatus {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.settingsBack svg {
+    font-size: 15px;
+}
+
+.settingsBack:hover {
+    color: var(--text);
+}
+
+.settingsTopTitle {
+    display: flex;
+    gap: 5px;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.settingsTopTitle span {
+    color: var(--muted);
+}
+
+.settingsTopTitle strong {
+    color: var(--text);
+}
+
+.settingsStatus {
+    color: var(--text);
+}
+
+.settingsStatus i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #6c9b76;
+}
+
+.settingsHero {
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+}
+
+.settingsHeroInner {
+    width: min(1250px, 90%);
+    min-height: 330px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.settingsEyebrow {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 2.5px;
+}
+
+.settingsHero h1 {
+    margin: 18px 0 15px;
+    color: var(--heading);
+    font-size: clamp(50px, 7vw, 92px);
+    line-height: .92;
+    font-weight: 500;
+    letter-spacing: -4px;
+}
+
+.settingsHero h1 em {
+    color: var(--accent);
+    font-style: normal;
+}
+
+.settingsHero p {
+    max-width: 520px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.settingsIdentity {
+    min-width: 270px;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--line);
+    background: color-mix(in srgb, var(--bg) 94%, var(--text));
+}
+
+.settingsAvatar {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--heading);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.settingsIdentity strong {
+    display: block;
+    color: var(--heading);
+    font-size: 15px;
+}
+
+.settingsIdentity span {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.settingsLayout {
+    width: min(1250px, 90%);
+    margin: auto;
+    padding: 75px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 330px;
+    gap: 70px;
+}
+
+.settingsMain {
+    min-width: 0;
+}
+
+.settingsBlock {
+    padding-bottom: 65px;
+    margin-bottom: 65px;
+    border-bottom: 1px solid var(--line);
+}
+
+.settingsBlockHeading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.settingsBlockHeading span {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.settingsBlockHeading h2 {
+    margin: 9px 0 0;
+    color: var(--heading);
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.settingsList {
+    border-top: 1px solid var(--line);
+}
+
+.settingsItem {
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--text);
+    text-decoration: none;
+}
+
+.settingsItem:hover {
+    color: var(--text);
+}
+
+.settingsItemIcon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    color: var(--accent);
+}
+
+.settingsItemContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.settingsItemContent strong {
+    display: block;
+    color: var(--heading);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.settingsItemContent span {
+    display: block;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.settingsItem > svg:last-child {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.settingsVerified {
+    color: #6c9b76 !important;
+    font-size: 9px !important;
+    letter-spacing: 1.5px;
+}
+
+.settingsSecure {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #6c9b76 !important;
+    font-size: 9px !important;
+    letter-spacing: 1.5px;
+}
+
+.settingsInlineAction {
+    color: var(--accent);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+.settingsToggle {
+    width: 38px;
+    height: 21px;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+}
+
+.settingsToggle span {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--muted);
+}
+
+.settingsToggle.active span {
+    margin-left: 15px;
+    background: var(--accent);
+}
+
+.settingsSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.settingsSecurityCard,
+.settingsSessionCard,
+.settingsHelpCard {
+    padding: 30px;
+    border: 1px solid var(--line);
+}
+
+.settingsSecurityCard {
+    background: var(--button);
+    color: var(--buttonText);
+}
+
+.settingsSecurityIcon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border: 1px solid rgba(255, 255, 255, .15);
+}
+
+.settingsSecurityCard > span,
+.settingsSessionCard > span,
+.settingsHelpCard > span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.settingsSecurityCard > span {
+    color: rgba(255, 255, 255, .55);
+}
+
+.settingsSecurityCard h3 {
+    margin: 14px 0;
+    font-size: 23px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.settingsSecurityCard p {
+    margin: 0;
+    color: rgba(255, 255, 255, .58);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.settingsSecurityStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+    color: rgba(255, 255, 255, .75);
+    font-size: 10px;
+}
+
+.settingsSecurityStatus i {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7fa985;
+}
+
+.settingsSessionCard strong {
+    display: block;
+    margin-top: 12px;
+    color: var(--heading);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.settingsSessionCard p {
+    margin: 7px 0 22px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.settingsSessionLine {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+}
+
+.settingsSessionLine span {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+.settingsSessionLine strong {
+    margin: 0;
+    color: var(--text);
+    font-size: 11px;
+}
+
+.settingsHelpCard h3 {
+    margin: 14px 0 25px;
+    color: var(--heading);
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+.settingsHelpCard a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--text);
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.settingsDanger {
+    padding-bottom: 20px;
+}
+
+.settingsLogout,
+.settingsDelete {
+    width: 100%;
+    min-height: 55px;
+    margin-top: 12px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.settingsLogout:hover {
+    border-color: var(--accent);
+}
+
+.settingsDelete {
+    color: #b56c6c;
+}
+
+.settingsDelete:hover {
+    border-color: #b56c6c;
+}
+
+.settingsBottom {
+    width: 100%;
+    min-height: 300px;
+    padding: 65px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    border-top: 1px solid var(--line);
+}
+
+.settingsBottom > div > span {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.settingsBottom h2 {
+    margin: 15px 0 0;
+    color: var(--heading);
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: .95;
+    font-weight: 500;
+    letter-spacing: -3px;
+}
+
+.settingsBottom h2 em {
+    color: var(--accent);
+    font-style: normal;
+}
+
+.settingsBottom > a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    border: 1px solid var(--line);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 11px;
+}
+
+.settingsBottom > a:hover {
+    border-color: var(--accent);
+}
+
+@media(max-width:1050px) {
+
+    .settingsLayout {
+        grid-template-columns: 1fr;
+    }
+
+    .settingsSidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .settingsSecurityCard {
+        grid-row: span 2;
+    }
+
+}
+
+@media(max-width:800px) {
+
+    .settingsHeroInner {
+        min-height: 430px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .settingsIdentity {
+        width: 100%;
+    }
+
+    .settingsLayout {
+        padding: 50px 0;
+    }
+
+    .settingsSidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .settingsSecurityCard {
+        grid-row: auto;
+    }
+
+    .settingsBottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .settingsTopbar {
+        padding: 0 20px;
+    }
+
+    .settingsTopTitle {
+        display: none;
+    }
+
+    .settingsHeroInner,
+    .settingsLayout {
+        width: calc(100% - 40px);
+    }
+
+    .settingsHero h1 {
+        font-size: 52px;
+        letter-spacing: -3px;
+    }
+
+    .settingsBlockHeading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .settingsItem {
+        min-height: 76px;
+    }
+
+    .settingsItemIcon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .settingsItemContent span {
+        max-width: 210px;
+    }
+
+    .settingsBottom {
+        padding: 50px 20px;
+    }
+
+    .settingsBottom h2 {
+        font-size: 42px;
+    }
+
+}
+
+.logoutOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, .55);
+    backdrop-filter: blur(10px);
+}
+
+.logoutModal {
+    position: relative;
+    width: min(440px, 100%);
+    padding: 34px;
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, .25);
+}
+
+.logoutClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.logoutClose:hover {
+    background: var(--soft);
+    color: var(--text);
+}
+
+.logoutIcon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 15px;
+    background: var(--soft);
+    color: var(--accent);
+    font-size: 23px;
+}
+
+.logoutEyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.logoutModal h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.logoutModal p {
+    margin: 14px 0 22px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.logoutAccount {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px;
+    margin-bottom: 22px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.logoutAvatar {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--soft);
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.logoutAccount div:last-child {
+    min-width: 0;
+}
+
+.logoutAccount strong,
+.logoutAccount span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.logoutAccount strong {
+    font-size: 14px;
+}
+
+.logoutAccount span {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.logoutActions {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.logoutSave,
+.logoutWithoutSave,
+.logoutCancel {
+    width: 100%;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.logoutSave {
+    border: 1px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+}
+
+.logoutSave:hover {
+    transform: translateY(-1px);
+    opacity: .92;
+}
+
+.logoutWithoutSave {
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+.logoutWithoutSave:hover {
+    background: var(--soft);
+}
+
+.logoutCancel {
+    min-height: 40px;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+}
+
+.logoutCancel:hover {
+    color: var(--text);
+}
+
+@media (max-width: 500px) {
+    .logoutOverlay {
+        padding: 16px;
+    }
+
+    .logoutModal {
+        padding: 28px 20px 22px;
+        border-radius: 20px;
+    }
+
+    .logoutModal h2 {
+        font-size: 24px;
+    }
+}

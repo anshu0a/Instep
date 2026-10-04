@@ -1,0 +1,374 @@
+
+.notFoundPage{
+    position:relative;
+    width:100%;
+    min-height:650px;
+    background:var(--bg);
+    color:var(--text);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    padding:30px 45px;
+}
+
+.notFoundPage::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:50%;
+    width:1px;
+    height:100%;
+    background:var(--line);
+    opacity:.45;
+}
+
+.notFoundPage::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    height:1px;
+    background:var(--line);
+    opacity:.25;
+}
+
+.notFoundHeader{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:var(--subtle);
+    font-size:9px;
+    letter-spacing:3px;
+}
+
+.notFoundMain{
+    position:relative;
+    z-index:2;
+    flex:1;
+    display:flex;
+    align-items:center;
+    min-height:500px;
+}
+
+.notFoundSide{
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:rotate(-90deg) translateX(-50%);
+    transform-origin:left top;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--subtle);
+    font-size:8px;
+    letter-spacing:3px;
+}
+
+.notFoundSideLine{
+    width:35px;
+    height:1px;
+    background:var(--accent);
+}
+
+.notFoundContent{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    padding:0 7%;
+}
+
+.notFoundTitle{
+    position:relative;
+}
+
+.titleSmall{
+    display:block;
+    margin-bottom:25px;
+    color:var(--accent);
+    font-size:10px;
+    letter-spacing:4px;
+}
+
+.notFoundTitle h1{
+    margin:0;
+    color:var(--heading);
+    font-size:clamp(70px,9vw,145px);
+    line-height:.78;
+    font-weight:500;
+    letter-spacing:-9px;
+}
+
+.notFoundTitle h1 em{
+    color:var(--accent);
+    font-family:Georgia,serif;
+    font-weight:400;
+    letter-spacing:-8px;
+}
+
+.notFoundDescription{
+    max-width:350px;
+    margin-left:auto;
+    padding-top:70px;
+}
+
+.notFoundDescription p{
+    margin:0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+    max-width:290px;
+}
+
+.notFoundActions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:30px;
+}
+
+.notFoundPrimary,
+.notFoundSecondary{
+    height:44px;
+    padding:0 17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    border-radius:6px;
+    font-size:11px;
+    text-decoration:none;
+    cursor:pointer;
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+}
+
+.notFoundPrimary{
+    background:var(--button);
+    border:1px solid var(--button);
+    color:var(--buttonText);
+}
+
+.notFoundPrimary:hover{
+    transform:translateY(-3px);
+    background:var(--accent);
+    border-color:var(--accent);
+}
+
+.notFoundSecondary{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--text);
+}
+
+.notFoundSecondary:hover{
+    transform:translateY(-3px);
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+.notFoundNumber{
+    position:absolute;
+    right:3%;
+    bottom:2%;
+    display:flex;
+    align-items:flex-end;
+    color:color-mix(in srgb,var(--accent) 12%,transparent);
+    font-size:clamp(100px,16vw,250px);
+    line-height:.7;
+    font-weight:700;
+    letter-spacing:-20px;
+    user-select:none;
+    pointer-events:none;
+}
+
+.notFoundNumber span{
+    animation:notFoundNumber 4s ease-in-out infinite;
+}
+
+.notFoundNumber span:nth-child(2){
+    animation-delay:.25s;
+}
+
+.notFoundNumber span:nth-child(3){
+    animation-delay:.5s;
+}
+
+.notFoundFooter{
+    position:relative;
+    z-index:3;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items:center;
+    color:var(--subtle);
+    font-size:8px;
+    letter-spacing:3px;
+}
+
+.notFoundFooter>div{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.notFoundFooter>span:nth-child(2){
+    text-align:center;
+}
+
+.notFoundFooter>span:last-child{
+    text-align:right;
+}
+
+.notFoundStatus{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--accent);
+    animation:notFoundStatus 2s ease-in-out infinite;
+}
+
+@keyframes notFoundNumber{
+    0%,
+    100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+@keyframes notFoundStatus{
+    0%,
+    100%{
+        opacity:.3;
+        transform:scale(1);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+@media(max-width:900px){
+
+    .notFoundPage{
+        padding:25px 30px;
+    }
+
+    .notFoundPage::before{
+        left:65%;
+    }
+
+    .notFoundContent{
+        padding:0 3%;
+    }
+
+    .notFoundTitle h1{
+        font-size:clamp(65px,10vw,100px);
+    }
+
+    .notFoundDescription{
+        padding-top:50px;
+    }
+
+    .notFoundNumber{
+        right:0;
+        bottom:4%;
+    }
+}
+
+@media(max-width:650px){
+
+    .notFoundPage{
+        min-height:600px;
+        padding:22px 20px;
+    }
+
+    .notFoundPage::before,
+    .notFoundPage::after{
+        display:none;
+    }
+
+    .notFoundMain{
+        min-height:500px;
+    }
+
+    .notFoundSide{
+        display:none;
+    }
+
+    .notFoundContent{
+        display:block;
+        padding:0;
+    }
+
+    .notFoundTitle h1{
+        font-size:70px;
+        letter-spacing:-5px;
+        line-height:.82;
+    }
+
+    .notFoundTitle h1 em{
+        letter-spacing:-5px;
+    }
+
+    .notFoundDescription{
+        margin:60px 0 0;
+        padding:0;
+    }
+
+    .notFoundActions{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .notFoundPrimary,
+    .notFoundSecondary{
+        width:170px;
+    }
+
+    .notFoundNumber{
+        font-size:130px;
+        letter-spacing:-12px;
+        opacity:.7;
+        bottom:12%;
+    }
+
+    .notFoundFooter{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+    }
+
+    .notFoundFooter>span:nth-child(2){
+        display:none;
+    }
+}
+
+@media(max-width:400px){
+
+    .notFoundTitle h1{
+        font-size:58px;
+    }
+
+    .notFoundDescription{
+        margin-top:50px;
+    }
+
+    .notFoundFooter{
+        font-size:7px;
+        letter-spacing:2px;
+    }
+
+    .notFoundNumber{
+        font-size:105px;
+    }
+}
+
