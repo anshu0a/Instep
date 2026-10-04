@@ -13,6 +13,7 @@ import {
     FiLogIn,
     FiTrash2
 } from "react-icons/fi";
+import Star from "../help/star/Star"
 import "./recent.css";
 
 export default function RecentLogin() {
@@ -72,9 +73,7 @@ export default function RecentLogin() {
 
     return (
         <div className="recentLoginPage">
-
-            <div className="recentGlow recentGlowOne"></div>
-            <div className="recentGlow recentGlowTwo"></div>
+            <Star />
 
             <div className="recentLoginMain">
 

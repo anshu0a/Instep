@@ -20,6 +20,8 @@ import Nav from "./Nav";
 import StartLoader from "./StartLoader";
 import RecentLogin from "../comp/recent/RecentLogin";
 
+import OAuthSuccess from "../comp/google/OAuthSuccess";
+
 export default function Junction() {
     const scrollRef = useRef(null);
     const { pathname } = useLocation();
@@ -52,6 +54,8 @@ export default function Junction() {
                         {/* <Route path="/reviews" element={<Reviews />} /> */}
                         <Route path="/recent" element={<RecentLogin/>} />
                         <Route path="/profile/:username" element={<Profile />} />
+
+                        <Route path="/oauth-success" element={<OAuthSuccess />} />
 
                         <Route element={<ProtectedRoute />}>
                             <Route path="/settings" element={<Settings />} />

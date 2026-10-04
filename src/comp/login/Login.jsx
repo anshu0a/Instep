@@ -12,6 +12,7 @@ import { FaGithub, FaApple, FaFacebookF } from "react-icons/fa";
 import Info from "./Info";
 import Star from "../help/star/Star";
 import { saveAccount } from "../help/accountStorage";
+import { WiSnow } from "react-icons/wi";
 
 export default function Login() {
 
@@ -232,11 +233,10 @@ export default function Login() {
                             </label>
 
                             <input
-                                className={`form-control border-0 rounded-0 shadow-none ${
-                                    errors.username
+                                className={`form-control border-0 rounded-0 shadow-none ${errors.username
                                         ? "is-invalid"
                                         : ""
-                                }`}
+                                    }`}
                                 name="username"
                                 id="email"
                                 type="text"
@@ -279,11 +279,10 @@ export default function Login() {
                             <div className="passwordBox position-relative">
 
                                 <input
-                                    className={`form-control border-0 rounded-0 shadow-none ${
-                                        errors.password
+                                    className={`form-control border-0 rounded-0 shadow-none ${errors.password
                                             ? "is-invalid"
                                             : ""
-                                    }`}
+                                        }`}
                                     name="password"
                                     id="pass"
                                     type={
@@ -405,6 +404,10 @@ export default function Login() {
                         className="clk"
                         type="button"
                         disabled={extra.loading}
+                        onClick={() =>  {
+                            console.log("google clk")
+                            window.location.href = `${BACKEND}/oauth/google`
+                        }}
                     >
                         <FcGoogle />
                     </button>

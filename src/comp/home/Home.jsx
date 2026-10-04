@@ -112,7 +112,7 @@ export default function Home() {
 
                 </div>
 
-                <div className="homeHeroVisual">
+                {/* <div className="homeHeroVisual">
 
                     <div className="heroWindow">
 
@@ -175,29 +175,11 @@ export default function Home() {
 
                     </div>
 
-                </div>
+                </div> */}
 
             </section>
 
-            <section className="homeStatement">
-
-                <span>THE IDEA</span>
-
-                <h2>
-                    Stop creating
-                    <br />
-                    <em>accounts.</em>
-                </h2>
-
-                <p>
-                    Every application should not need its own identity.
-                    Instep gives your projects a common authentication
-                    layer so users can move between them naturally.
-                </p>
-
-            </section>
-
-            <section className="homeApps">
+            {/* <section className="homeApps">
 
                 <div className="homeSectionHeading">
 
@@ -256,7 +238,7 @@ export default function Home() {
                             </div>
 
                             <div className="homeAppBottom">
-                                CONNECTED TO INSTeP
+                                CONNECTED TO INSTEP
                             </div>
 
                         </div>
@@ -270,7 +252,7 @@ export default function Home() {
 
                 <div className="homeFeatureIntro">
 
-                    <span>WHY INSTeP</span>
+                    <span>WHY INSTEP</span>
 
                     <h2>
                         Identity should
@@ -349,7 +331,7 @@ export default function Home() {
 
                 </div>
 
-            </section>
+            </section> */}
 
             <section className="homeSecurity">
 

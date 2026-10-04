@@ -1,0 +1,112 @@
+.oauthSuccess {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.oauthSuccessContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 25px;
+}
+
+.oauthSuccessIcon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 20px;
+}
+
+.oauthSuccessIcon.loading {
+    animation: oauthSpin 1s linear infinite;
+}
+
+.oauthSuccessIcon.success {
+    animation: oauthSuccessPop .45s ease;
+}
+
+.oauthSuccessContent h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.oauthSuccessContent p {
+    margin: 10px 0 0;
+    font-size: 15px;
+    opacity: .7;
+}
+
+.oauthSuccessGlow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: .16;
+    pointer-events: none;
+}
+
+.oauthSuccessGlowOne {
+    top: -120px;
+    left: -100px;
+    background: #607da8;
+}
+
+.oauthSuccessGlowTwo {
+    right: -120px;
+    bottom: -120px;
+    background: #91a9cb;
+}
+
+@keyframes oauthSpin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes oauthSuccessPop {
+    0% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .oauthSuccessContent {
+        padding: 30px 20px;
+    }
+
+    .oauthSuccessContent h2 {
+        font-size: 24px;
+    }
+
+    .oauthSuccessContent p {
+        font-size: 14px;
+    }
+
+    .oauthSuccessIcon {
+        width: 50px;
+        height: 50px;
+    }
+}

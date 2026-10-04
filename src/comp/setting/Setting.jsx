@@ -99,7 +99,7 @@ export default function Settings() {
 
         clearCurrentLogin();
 
-        window.location.href = "/resent";
+        window.location.href = "/recent";
     }
 
     function switchAccount(saveLogin) {
@@ -124,7 +124,7 @@ export default function Settings() {
         clearCurrentLogin();
 
         if (saveLogin) {
-            window.location.href = "/resent";
+            window.location.href = "/recent";
         } else {
             window.location.href = "/login";
         }
